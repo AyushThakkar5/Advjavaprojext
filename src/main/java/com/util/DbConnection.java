@@ -8,7 +8,7 @@ public class DbConnection
 	public static Connection getConnection()
 	{
 		Connection conn = null;
-		String dbUrl = "";
+		String dbUrl = "jdbc:mysql://localhost:3306/advjava";
 		String name = "root";
 		String password = "12345678";
 		try {
