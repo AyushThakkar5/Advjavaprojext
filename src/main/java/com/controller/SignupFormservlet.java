@@ -121,7 +121,7 @@ public class SignupFormservlet extends HttpServlet {
         }
         
        
-        if (hasErrors) 
+        if (hasErrors)  
         {
             request.getRequestDispatcher("Signupform.jsp").forward(request, response);
         } else 

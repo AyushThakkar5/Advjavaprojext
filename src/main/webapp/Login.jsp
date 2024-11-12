@@ -26,6 +26,20 @@
                      class="img-fluid" alt="Phone image">
             </div>
             <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                <!-- Check if error message exists in session -->
+                <% 
+                    String errorMessage = (String) session.getAttribute("error");
+                    if (errorMessage != null) { 
+                %>
+                    <div class="alert alert-danger" role="alert">
+                        <%= errorMessage %>
+                    </div>
+                    <%
+                    // Remove error message from session after displaying it
+                    session.removeAttribute("error");
+                    }
+                %>
+                
                 <form action="LoginServlet" method="post" id="loginForm">
                     <!-- Email input -->
                     <div data-mdb-input-init class="form-outline mb-4">
